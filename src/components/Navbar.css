@@ -1,0 +1,131 @@
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+
+  position: relative;
+}
+
+/* PILL */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #f3f3f3;
+  border-radius: 999px;
+  padding: 12px 18px;
+
+  gap: 40px;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.join-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* HAMBURGER (HIDDEN DEFAULT) */
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU DEFAULT */
+.mobile-menu {
+  display: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .nav-inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .nav-left {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  /* HIDE DESKTOP ITEMS */
+  .nav-links,
+  .nav-inner .join-btn {
+    display: none;
+  }
+
+  /* SHOW HAMBURGER */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* DROPDOWN */
+  .mobile-menu {
+    position: absolute;
+    top: 60px;
+    left: 5%;
+    width: 90%;
+
+    background: #f3f3f3;
+    border-radius: 16px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .mobile-menu .join-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

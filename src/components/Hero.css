@@ -1,0 +1,106 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding-top: 100px;
+}
+
+/* ===== ICON STACK ===== */
+.icon-stack {
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 30px;  /* ✅ keeps it centered */
+}
+
+.stack-icon {
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.pos-0 {
+  transform: translate(-50%, -50%) translateY(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
+.pos-1 {
+  transform: translate(-50%, -50%) translateY(-6px) scale(0.9);
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.pos-2 {
+  transform: translate(-50%, -50%) translateY(-12px) scale(0.8);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.pos-3 {
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* ===== TEXT ===== */
+.hero-title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.hero-subtext {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #6b6b6b;
+  margin-bottom: 30px;
+}
+
+/* ===== BUTTONS ===== */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.primary-btn {
+  background: black;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+}
+
+.secondary-btn {
+  background: #f3f3f3;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 640px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,86 @@
+.video-section {
+ 
+  padding: 100px 40px;
+  text-align: center;
+}
+ 
+/* GRID */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* CARD (slightly less tall) */
+.video-card {
+  background: #ececec;
+  border-radius: 30px;
+  height: 540px; /* was 600px */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PHONE (zoomed out) */
+.phone-frame {
+  width: 240px;   /* was 280px */
+  height: 500px;  /* was 560px */
+  border-radius: 40px;
+  overflow: hidden;
+  background: black;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* OPTIONAL: make heading breathe more */
+.video-heading {
+  font-size: 48px; /* was 52px */
+  margin-bottom: 100px;
+}
+
+/* VIDEO */
+.phone-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* TEXT SECTION */
+.video-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  margin-top: 60px;
+  padding: 0 40px;
+  text-align: left;
+}
+
+/* EACH BLOCK */
+.info-block h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-block p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    height: 500px;
+  }
+
+  .phone-frame {
+    width: 220px;
+    height: 460px;
+  }
+}

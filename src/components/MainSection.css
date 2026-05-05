@@ -1,0 +1,56 @@
+/* WRAPPER */
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/* MAIN CONTAINER */
+.main-box {
+  width: 95%;              /* was 95% */
+  max-width: 1200px;       /* was 1200px */
+
+   
+  border-radius: 20px;
+
+  padding: 60px 60px 0;
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* STACKED IMAGES */
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  border-radius: 16px;
+
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* 🔥 smooth blend */
+}
+
+/* ACTIVE IMAGE */
+.image.active {
+  opacity: 1;
+}
+
+/* KEEP HEIGHT STABLE (prevents layout jump) */
+.image-container::after {
+  content: "";
+  display: block;
+  padding-top: 56%; /* adjust if your image ratio differs */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-box {
+    padding: 20px 16px 0;
+  }
+}

@@ -1,0 +1,63 @@
+ .section {
+  background: #f5f5f5;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* 🔥 HEADING (STATIC) */
+.heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* MARQUEE CONTAINER */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* TRACK */
+.track {
+  display: flex;
+  width: max-content;
+
+  animation: moveLeft 30s linear infinite;
+}
+
+/* CARD */
+.card {
+  flex: 0 0 auto;
+  margin: 0 25px;
+  text-align: center;
+}
+
+/* LABEL */
+.label {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight:500 ;
+}
+
+/* IMAGE */
+.image-box {
+  border-radius: 25px;
+  overflow: hidden;
+  background: white;
+}
+
+.image-box img {
+  height: 520px;
+  display: block;
+}
+
+/* 🔥 SMOOTH LOOP */
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

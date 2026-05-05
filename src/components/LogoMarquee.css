@@ -1,0 +1,157 @@
+.marquee-section {
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* TEXT */
+.marquee-heading {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.marquee-sub {
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+/* ROWS */
+.marquee-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+/* CTA BUTTONS */
+.marquee-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY */
+.cta-primary {
+  background: black;
+  color: white;
+  border: none;
+
+  padding: 14px 17px;
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SECONDARY */
+.cta-secondary {
+  background: transparent;
+  color: #111;
+
+  border: 1px solid #ddd;
+  border-radius: 999px;
+
+  padding: 14px 17px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* HOVER (subtle) */
+.cta-secondary:hover {
+  background: #f5f5f5;
+}
+/* EACH ROW */
+.marquee-row {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* TRACK (ULTRA SLOW) */
+.marquee-track {
+  display: flex;
+  gap: 80px;
+  
+
+  animation: scroll-left linear infinite;
+  animation-duration: 140s; /* 🔥 very slow */
+  will-change: transform;
+}
+
+/* OPPOSITE DIRECTION */
+.marquee-track.right {
+  animation-name: scroll-right;
+  animation-duration: 190s;
+}
+
+/* ITEM */
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  opacity: 1;
+}
+
+/* ICON */
+.logo-item img {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+
+  object-fit: cover;
+
+  filter: none !important; /* 🔥 keep original colors */
+  opacity: 1;
+}
+
+/* OPTIONAL hover */
+.logo-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.14s ease;
+}
+
+/* ANIMATIONS */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* shrink spacing */
+@media (max-width: 768px) {
+  .marquee-track {
+    gap: 40px;
+    animation-duration: 120s;
+  }
+
+  .logo-item img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-item {
+    font-size: 16px;
+  }
+}
